@@ -7,10 +7,10 @@ import About from './pages/About/About.jsx'
 import Home from './pages/Home/Home.jsx'
 import Blog from './pages/Blog/Blog.jsx'
 import NotFound from './pages/NotFound/NotFound.jsx'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
+import { createHashRouter, Navigate, RouterProvider } from 'react-router-dom'
 import BlogArticlePage from './pages/BlogArticlePage/BlogArticlePage.jsx'
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
     {path: "", element: <Layout/>, children: [
         {path: "", element: <Home/>},
         {path: "about", element: <About/>},
@@ -19,9 +19,7 @@ const routes = createBrowserRouter([
         {path: 'notfound', element: <NotFound />},
         {path: '*', element: <Navigate to='/notfound' replace />},
     ]}, 
-], {
-    basename: "/Adaasa"
-})
+])
 
 createRoot(document.getElementById('root')).render(
   <>

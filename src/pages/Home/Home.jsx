@@ -1,7 +1,7 @@
 import React from 'react'
 import { useOutletContext, Link } from 'react-router-dom';
 import Article from '../../components/Article/Article'
-import RecentArticle from "../../components/recentArticle/RecentArticle.jsx";
+import RecentArticle from "../../components/recentArticle/recentArticle.jsx";
 
 export default function Home() {
     const { data } = useOutletContext();
